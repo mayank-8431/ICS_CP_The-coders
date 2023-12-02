@@ -62,7 +62,7 @@ The program presents a menu to choose the type of equation to solve. It prompts 
 - [MAYANK DAHIYA]
 - [SHARAN]
 - [ARMAN]
-- [SUNIL]
+- [SUNIL BISHNOI]
 
 
 
