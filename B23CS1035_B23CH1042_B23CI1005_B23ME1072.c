@@ -285,8 +285,8 @@ case 5: {
   double a, b, c, d, e, f, g, h, i, j, k,l;
   
     printf("\nWhile creating the file, make sure to use following formats:\n");
-    printf("quadratic a b c\n");
-    printf("linear_one_variable a b\n");
+    printf("quadratic ax^2+bx+c=0\n");
+    printf("linear_one_variable ax+b=0\n");
     printf("linear_two_variable a b c d e f \n");
    
   char filename[30];
