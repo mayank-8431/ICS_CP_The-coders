@@ -25,8 +25,8 @@ Three Linear Equations in Three Variables: Solves a system of three linear equat
 
 This program also supports reading equations from a file. Use the following format in the file:
 
-- For quadratic equations: `quadratic a b c`
-- For single-variable linear equations: `linear_one_variable a b`
+- For quadratic equations: `quadratic ax^2+bx+c=0`
+- For single-variable linear equations: `linear_one_variable ax+b=0`
 - For two-variable linear equations: `linear_two_variable a b c d e f`
 
 Ensure that the coefficients are separated by spaces.
