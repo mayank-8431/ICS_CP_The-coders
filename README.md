@@ -40,7 +40,7 @@ Provide coefficients in the form of a 3x3 matrix and constants as a 3x1 matrix.
 ##Program Flow
 The program presents a menu to choose the type of equation to solve. It prompts for input based on the selected equation type and provides solutions or specific messages depending on the input.
 
-Hiiii
+
 
 
 
