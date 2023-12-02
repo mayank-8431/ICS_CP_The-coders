@@ -14,6 +14,24 @@ Linear Equation: Finds the solution of a linear equation or identifies if it has
 Three Linear Equations in Three Variables: Solves a system of three linear equations and displays the values of x, y, and z if solutions exist.
 
 
+## Usage
+1. Run the program.
+2. Choose the type of equation you want to solve.
+3. Enter the coefficients or constants when prompted.
+4. Get the solutions for the equations based on your input.
+
+
+## File Input/Output
+
+This program also supports reading equations from a file. Use the following format in the file:
+
+- For quadratic equations: `quadratic a b c`
+- For single-variable linear equations: `linear_one_variable a b`
+- For two-variable linear equations: `linear_two_variable a b c d e f`
+
+Ensure that the coefficients are separated by spaces.
+
+
 ##Select Equation Type:
 Follow the on-screen instructions to select the type of equation you want to solve and input the required coefficients or values.
 
@@ -40,6 +58,11 @@ Provide coefficients in the form of a 3x3 matrix and constants as a 3x1 matrix.
 ##Program Flow
 The program presents a menu to choose the type of equation to solve. It prompts for input based on the selected equation type and provides solutions or specific messages depending on the input.
 
+## Contributors
+- [MAYANK DAHIYA]
+- [SHARAN]
+- [ARMAN]
+- [SUNIL]
 
 
 
