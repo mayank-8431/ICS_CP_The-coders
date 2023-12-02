@@ -199,8 +199,6 @@ void fileOneVarLinear(double a, double b, FILE *IOfile) {
 
 //void 
 
-
-
 int main() {
     int choice =0;
   while(choice !=6) {
@@ -304,20 +302,22 @@ case 5: {
   
   while (fscanf(IOfile, "%s", equationType) != EOF) {
     if (strcmp(equationType, "quadratic") == 0) {
-      fscanf(IOfile, "%lf %lf %lf", &a, &b, &c);
-      fileQuadratic(a, b, c, IOfile);                       //
+        char c1,c2,c3,c4;
+      fscanf(IOfile, "%lf%c%c%lf%lf%c%lf%c%lf", &a,&c1,&c2,&d, &b, &c3, &c, &c4, &e);        //5x^2-9x+5.44=0
+      fileQuadratic(a, b, c, IOfile);                       
     } 
     else if (strcmp(equationType, "linear_two_variable") == 0) {
       fscanf(IOfile, "%lf %lf %lf %lf %lf %lf", &a, &b, &c, &d, &e, &f);
-      filePairLinear(a, b, c, d, e, f, IOfile);                       //
+      filePairLinear(a, b, c, d, e, f, IOfile);                       
     } 
     // else if (strcmp(equationType, "linear_three_variable") == 0) {
     //   fscanf(IOfile, "%d %d %d %d %d %d %d %d %d", &a, &b, &c, &d, &e, &f, &g, &h, &i);
     //   fileThreeVarLinear(a, b, c, d, e, f, g, h, i, IOfile);
     //} 
     else if (strcmp(equationType, "linear_one_variable") == 0) {
-      fscanf(IOfile, "%lf %lf", &a, &b);
-      fileOneVarLinear(a, b, IOfile);                             //
+        char c1,c2,c3,c4;
+      fscanf(IOfile, "%lf%c%lf%c%lf", &a, &c1, &b, &c2, &c);                    //2x-6=0
+      fileOneVarLinear(a, b, IOfile);                             
     } 
     else {
       printf("Unknown equation type: %s\n", equationType);
