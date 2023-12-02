@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-
+//hiiii
 void pair_linear(int *a1, int *b1, int *c1, int *a2, int *b2, int *c2) {
     if (*a1 / (*a2) == *b1 / (*b2) && *c1 / (*c2) == *b1 / (*b2)) {
         printf("There are infinitely many solutions of x and y.\n");
