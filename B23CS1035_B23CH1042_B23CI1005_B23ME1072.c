@@ -287,7 +287,7 @@ case 5: {
     printf("\nWhile creating the file, make sure to use following formats:\n");
     printf("quadratic ax^2+bx+c=0\n");
     printf("linear_one_variable ax+b=0\n");
-    printf("linear_two_variable a b c d e f \n");
+    printf("linear_two_variable ax+by+c=0 dx+ey+f=0 \n");
    
   char filename[30];
   printf("\nEnter the file name (.txt):");
@@ -303,11 +303,12 @@ case 5: {
   while (fscanf(IOfile, "%s", equationType) != EOF) {
     if (strcmp(equationType, "quadratic") == 0) {
         char c1,c2,c3,c4;
-      fscanf(IOfile, "%lf%c%c%lf%lf%c%lf%c%lf", &a,&c1,&c2,&d, &b, &c3, &c, &c4, &e);        //5x^2-9x+5.44=0
+      fscanf(IOfile, "%lf%c%c%lf%lf%c%lf%c%lf", &a, &c1, &c2, &d, &b, &c3, &c, &c4, &e);        //5x^2-9x+5.44=0
       fileQuadratic(a, b, c, IOfile);                       
     } 
     else if (strcmp(equationType, "linear_two_variable") == 0) {
-      fscanf(IOfile, "%lf %lf %lf %lf %lf %lf", &a, &b, &c, &d, &e, &f);
+        char c1,c2,c3,c4,c5,c6,c7,c8;
+      fscanf(IOfile, "%lf%c%lf%c%lf%c%lf %lf%c%lf%c%lf%c%lf", &a, &c1, &b, &c2, &c, &c3, &g, &d, &c4, &e, &c5, &f, &c6, &h);         //ax+by+c=0 dx+ey+f=0
       filePairLinear(a, b, c, d, e, f, IOfile);                       
     } 
     // else if (strcmp(equationType, "linear_three_variable") == 0) {
