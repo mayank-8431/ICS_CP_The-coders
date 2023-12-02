@@ -27,9 +27,7 @@ This program also supports reading equations from a file. Use the following form
 
 - For quadratic equations: `quadratic ax^2+bx+c=0`
 - For single-variable linear equations: `linear_one_variable ax+b=0`
-- For two-variable linear equations: `linear_two_variable a b c d e f`
-
-Ensure that the coefficients are separated by spaces.
+- For two-variable linear equations: `linear_two_variable ax+by+c=0 dx+ey+f=0`
 
 
 ##Select Equation Type:
