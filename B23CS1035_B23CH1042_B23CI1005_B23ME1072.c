@@ -311,10 +311,6 @@ case 5: {
       fscanf(IOfile, "%lf%c%lf%c%lf%c%lf %lf%c%lf%c%lf%c%lf", &a, &c1, &b, &c2, &c, &c3, &g, &d, &c4, &e, &c5, &f, &c6, &h);         //ax+by+c=0 dx+ey+f=0
       filePairLinear(a, b, c, d, e, f, IOfile);                       
     } 
-    // else if (strcmp(equationType, "linear_three_variable") == 0) {
-    //   fscanf(IOfile, "%d %d %d %d %d %d %d %d %d", &a, &b, &c, &d, &e, &f, &g, &h, &i);
-    //   fileThreeVarLinear(a, b, c, d, e, f, g, h, i, IOfile);
-    //} 
     else if (strcmp(equationType, "linear_one_variable") == 0) {
         char c1,c2,c3,c4;
       fscanf(IOfile, "%lf%c%lf%c%lf", &a, &c1, &b, &c2, &c);                    //2x-6=0
