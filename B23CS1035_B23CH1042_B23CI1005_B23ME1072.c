@@ -5,9 +5,11 @@
 void pair_linear(int *a1, int *b1, int *c1, int *a2, int *b2, int *c2) {
     if (*a1 / (*a2) == *b1 / (*b2) && *c1 / (*c2) == *b1 / (*b2)) {
         printf("There are infinitely many solutions of x and y.\n");
-    } else if (*a1 / (*a2) == *b1 / (*b2) && *c1 / (*c2) != *a1 / (*a2)) {
+    } 
+    else if (*a1 / (*a2) == *b1 / (*b2) && *c1 / (*c2) != *a1 / (*a2)) {
         printf("There are no possible solutions of x and y.\n");
-    } else {
+    }
+    else {
         int x, y;
         int p = (-(*c1));
         int q = (-(*c2));
@@ -31,11 +33,13 @@ void solveQuadratic(double a, double b, double c) {
         *x1 = (-(b) + sqrt(discriminant)) / (2 * (a));
         *x2 = (-(b) - sqrt(discriminant)) / (2 * (a));
         printf("Two real roots: x1 = %.5f and x2 = %.5f\n", *x1, *x2);
-    } else if (discriminant == 0) {
+    }
+    else if (discriminant == 0) {
         *x1 = -(b) / (2 * (a));
         *x2 = *x1;
         printf("Repeated real roots: x1 = x2 = %.5f\n", *x1);
-    } else {
+    } 
+    else {
         double realPart = -(b) / (2 * (a));
         double imaginaryPart = sqrt(-discriminant) / (2 * (a));
         printf("Complex roots: x1 = %.5f + %.5fi and x2 = %.5f - %.5fi\n", realPart, imaginaryPart, realPart, imaginaryPart);
@@ -46,10 +50,12 @@ void solveLinearEquation(float *a, float *b, float *solution) {
     if (*a == 0) {
         if (*b == 0) {
             printf("Infinite solutions (identity)\n");
-        } else {
+        } 
+        else {
             printf("No solution (contradiction)\n");
         }
-    } else {
+    } 
+    else {
         *solution = -(*b) / (*a);
         printf("The solution for x is: %f\n", *solution);
     }
@@ -131,9 +137,6 @@ printf("The value of z is %f\n",result[2][0]);
 }
 
 
-      
-
-
 
 //functions for files
 void filePairLinear(double a1, double b1, double c1, double a2, double b2, double c2, FILE *IOfile) {
@@ -141,11 +144,13 @@ void filePairLinear(double a1, double b1, double c1, double a2, double b2, doubl
     {
         if ((c1 * b2 - b1 * c2) == 0 && (a1 * c2 - c1 * a2) == 0) {
             fprintf(IOfile, "  There are infinitely many solutions of x and y.\n");
-        } else 
+        } 
+        else 
         {
             fprintf(IOfile, "  There are no possible solutions of x and y.\n");
         }
-    } else 
+    } 
+    else 
     {
         float x, y;
         float dell = a1 * b2 - b1 * a2;
@@ -169,13 +174,14 @@ void fileQuadratic(double a, double b, double c, FILE *IOfile)
     x1 = (-(b) + sqrt(discriminant)) / (2 * (a));
     x2 = (-(b) - sqrt(discriminant)) / (2 * (a));
     fprintf(IOfile,"  Two real roots: x1 = %.5f and x2 = %.5f\n", x1, x2);
-  } else if (discriminant == 0) 
+  } 
+  else if (discriminant == 0) 
   {
     x1 = -(b) / (2 * (a));
     //x2 = *x1;
     fprintf(IOfile, "  Repeated real roots: x1 = x2 = %.5f\n", x1);
-  } else
-  {
+  } 
+  else{
     double realPart = -(b) / (2 * (a));
     double imaginaryPart = sqrt(-discriminant) / (2 * (a));
     fprintf(IOfile, "  Complex roots: x1 = %.5f + %.5fi and x2 = %.5f - %.5fi\n", realPart, imaginaryPart, realPart, imaginaryPart);
